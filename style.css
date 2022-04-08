@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url(animacoes.css);
+* {
+    font-family: "Raleway", sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    color: #ffffff;
+}
+html {
+    background-color: #161616;
+    overflow: hidden;
+}
+.cabecalho {
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 5em;
+    background-color: #262626;
+}
+.cabecalho-logomarca{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10em;
+    height: 100%;
+    margin: 0 0 0 2em;
+}
+.cabecalho-logomarca-imagem {
+    width: 4.5em;
+    height: auto;
+    margin: 0;
+}
+.cabecalho-logomarca-titulo {
+    font-size: 20pt;
+}
+.cabecalho-animacao {
+    display: grid;
+    place-items: center;
+    height: 100%;
+    width: 20em;
+    text-align: center;
+    font-size: 15pt;
+    font-weight: 400;
+    animation: animacaoTexto 5s infinite;
+}

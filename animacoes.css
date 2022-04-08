@@ -1,0 +1,14 @@
+@keyframes animacaoTexto {
+    from {
+        transform: translateX(100vw);
+    }
+    25% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
