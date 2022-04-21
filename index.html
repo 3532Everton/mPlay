@@ -7,12 +7,14 @@
     <meta name="description" content="Escute agora suas música favoritas e aproveite sem anúcios">
 
     <!-- logomarca -->
-    <link rel="shortcut icon" href="arquivos/logomarca.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="image/logomarca.ico" type="image/x-icon">
     <!-- Folha de estilos -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- Font awensome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- scripts -->
+    <script src="js/script.js" defer></script>
+    <script src="js/metronomo.js" defer></script>
     <title>mPlay</title>
 </head>
 <body>
@@ -20,7 +22,7 @@
     <header class="cabecalho">
         <!-- logomarca -->
         <div class="cabecalho-logomarca">
-            <img src="arquivos/logo mplay.png" alt="logomarca mplay" class="cabecalho-logomarca-imagem">
+            <img src="image/logo mplay.png" alt="logomarca mplay" class="cabecalho-logomarca-imagem">
             <span class="cabecalho-logomarca-titulo">mPlay</span>
         </div>
         <!-- animação -->
@@ -53,18 +55,28 @@
         <!-- painel de controle -->
         <section class="painel-de-controle">
             <!-- Botões de player de música -->
-            <div class="player-de-musica"></div>
+            <div class="player-de-musica">
+                
+            </div>
             <!-- metrônomo -->
-            <div class="metronomo"></div>
+            <div class="metronomo">
+                Metrônomo
+                <div>
+                    Play/pause:
+                    <button id="metronomo-bnt" class="metronomo-bnt"><i id="bnt-icon-play-pause" class=" metronomo-icon fas fa-play"></i></button>
+                </div>
+                <div>
+                    Velocidade:
+                    <input min="1" value="1" type="number" class="metronomo-velocidade" name="metronomo-velocidade" id="metronomo-velocidade" max="5">
+                </div>
+            </div>
             <!-- Display -->
             <div class="display">
-                <span class="data-hora">09/08/0022 16:57</span>
+                <span id="data-hora" class="data-hora">09/08/0022 16:57</span>
                 <span class="display-texto">--</span>
             </div>
             <!-- caixa de som -->
             <div class="caixa-de-som"></div>
-            <!-- volume -->
-            <div class="volume"></div>
         </section>
         <!-- teclas -->
         <div class="teclas">
