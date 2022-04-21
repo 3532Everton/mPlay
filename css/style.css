@@ -36,19 +36,34 @@ html {
     font-size: 20pt;
 }
 .cabecalho-animacao {
-    display: grid;
-    place-items: center;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 10px;
     height: 100%;
     text-align: center;
     font-size: 15pt;
     font-weight: 400;
+}
+.bnt-playPause{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bnt-icon {
+    display: grid;
+    place-items: center;
+    background-color: #181818;
+    width: 35px;
+    height: 35px;
+    border-radius: 25px;
+    transition: 1s;
 }
 .animacao-texto {
     display: flex;
     height: 100%;
 }
 .animacao-texto-caractere {
-    animation: tocar 1s infinite cubic-bezier(0.36, 0, 0.66, -0.56);
     border: 1px solid;
     background: #fff;
     border-radius: 0 0 3px 3px;
@@ -58,6 +73,9 @@ html {
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
+}
+.animacao-ativada{
+    animation: tocar 1s infinite cubic-bezier(0.36, 0, 0.66, -0.56);
 }
 .animacao-texto-caractere-tecla{
     position: relative;

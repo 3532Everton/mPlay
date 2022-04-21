@@ -9,4 +9,29 @@ const intervalo = setInterval(() => {
     dataHora.innerText = horario
 }, 1000)
 
-
+// play e pause da animação
+const bntPlayPause = document.getElementById('bnt-playPause').addEventListener('click', function(){
+    const bntPlayPauseIcon = document.getElementById('bnt-playPause-icon')
+    if (bntPlayPauseIcon.classList.contains('fa-play')){
+        bntPlayPauseIcon.classList.remove('fa-play')
+        bntPlayPauseIcon.classList.add('fa-pause')
+    } else {
+        bntPlayPauseIcon.classList.remove('fa-pause')
+        bntPlayPauseIcon.classList.add('fa-play')
+    }
+    if (bntPlayPauseIcon.classList.contains('fa-play')){
+        for(let i = 0; i<= 18;i++){
+        const animacaoPiano = document.getElementsByClassName('animacao-texto-caractere')[i]
+        animacaoPiano.classList.add('animacao-ativada')
+        }
+    } else {
+        for(let i = 0; i<= 18;i++){
+        const animacaoPiano = document.getElementsByClassName('animacao-texto-caractere')[i]
+        animacaoPiano.classList.remove('animacao-ativada')
+        }
+    }
+})
+for(let i = 0; i<= 18;i++){
+    const animacaoPiano = document.getElementsByClassName('animacao-texto-caractere')[i]
+    animacaoPiano.classList.toggle('animacao-ativada')
+}
