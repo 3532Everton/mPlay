@@ -10,7 +10,7 @@
 }
 html {
     background-color: #161616;
-    overflow: hidden;
+    overflow: visible;
 }
 .cabecalho {
     display:flex;
@@ -140,6 +140,7 @@ html {
 .metronomo-velocidade{
     width: 40px;
     color: #000000;
+    height: 25px;
 }
 .display{
     grid-column: 2;
@@ -233,10 +234,47 @@ html {
 .tecla-branca:hover{background: linear-gradient(to top, #979797 15%, #ffffff 100%);height: 100%;box-shadow: none;}
 .tecla-preta:hover{background: linear-gradient(to top, #bbbbbb 0%, #000000 10%);box-shadow: none; height: 9.3em;}
 .ultima-preta {width: 1.015em; right: -24px; border-radius: 0 0 0 3px;box-shadow: -3px 0px 0.5em 0.01em #262626;}
-::-webkit-scrollbar {
+div::-webkit-scrollbar {
     background: #161616;
 }
-::-webkit-scrollbar-thumb{
+div::-webkit-scrollbar-thumb{
     background-color: #c5c5c5;
     border-radius: 25px;
+}
+::-webkit-scrollbar{
+    background: #161616;
+    width: 5px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #0f0f0f;
+    border-radius: 25px;
+}
+@media (max-width: 600px){
+    .cabecalho{
+        height: auto;
+        padding: 5px;
+        gap: 5px;
+        flex-direction: column;
+    }
+    .cabecalho-animacao{
+        width: 90%;
+        flex-direction: column-reverse;
+    }
+    .animacao-texto-caractere{width: 17px;}
+    .animacao-texto-caractere-tecla{
+        right: -8px;
+        width: 6px;
+        border-radius: 0 0 1px 1px;
+    }
+    .ultima-preta-animacao{
+        width: 3px;
+        right:-7px;
+        border-radius: 0 0 0 0.1px;
+    }
+    .corpo{padding: .5em;}
+    .painel-de-controle{height: 9em;}
+    .metronomo{flex-wrap: wrap; gap: 5px;}
+    .tecla-branca{min-width: 3.06em;}
+    .tecla-preta{width: 1.53em; right: -25px;}
+    .ultima-preta{width: calc(1.53em/2);right: -18.5px;}
 }
