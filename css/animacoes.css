@@ -73,3 +73,6 @@
         background-color: #fff;
     }
 }
+@keyframes rotacionar {
+    from {transform: rotateZ(360deg);}
+}

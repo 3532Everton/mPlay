@@ -136,6 +136,7 @@ html {
 }
 .metronomo-icon {
     color: #000000;
+    animation: rotacionar 5s infinite;
 }
 .metronomo-velocidade{
     width: 40px;
