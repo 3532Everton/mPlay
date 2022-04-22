@@ -23,7 +23,7 @@ function tocar(){
             clearInterval(tocando)
             metronomoBnt.removeAttribute('disabled')
             metronomoBnt.style.background = '#B5B5B5'
-            bntIconPlayPause.style.color = '#000000'
+            bntIconPlayPause.style.color = 'initial'
         }, tempo.value*1000);
 
     }, 1000);
