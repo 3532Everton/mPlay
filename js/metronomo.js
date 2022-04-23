@@ -15,7 +15,8 @@ function tocar(){
     const tempo = document.getElementById('metronomo-tempo')
     const metronomoAudio = document.getElementById('metronomo-audio')
     const bntIconPlayPause = document.getElementById('bnt-icon-play-pause')
-
+    
+    metronomoBnt.style.cursor = 'default'
     var tocando = setInterval(() => {
         metronomoAudio.play()
 
@@ -23,6 +24,7 @@ function tocar(){
             clearInterval(tocando)
             metronomoBnt.removeAttribute('disabled')
             metronomoBnt.style.background = '#B5B5B5'
+            metronomoBnt.style.cursor = 'pointer'
             bntIconPlayPause.style.color = 'initial'
         }, tempo.value*1000);
 
