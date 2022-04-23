@@ -12,14 +12,14 @@ const intervalo = setInterval(() => {
 // play e pause da animação
 const bntPlayPause = document.getElementById('bnt-playPause').addEventListener('click', function(){
     const bntPlayPauseIcon = document.getElementById('bnt-playPause-icon')
-    if (bntPlayPauseIcon.classList.contains('fa-play')){
-        bntPlayPauseIcon.classList.remove('fa-play')
-        bntPlayPauseIcon.classList.add('fa-pause')
-    } else {
+    if (bntPlayPauseIcon.classList.contains('fa-pause')){
         bntPlayPauseIcon.classList.remove('fa-pause')
         bntPlayPauseIcon.classList.add('fa-play')
+    } else {
+        bntPlayPauseIcon.classList.remove('fa-play')
+        bntPlayPauseIcon.classList.add('fa-pause')
     }
-    if (bntPlayPauseIcon.classList.contains('fa-play')){
+    if (bntPlayPauseIcon.classList.contains('fa-pause')){
         for(let i = 0; i<= 18;i++){
         const animacaoPiano = document.getElementsByClassName('animacao-texto-caractere')[i]
         animacaoPiano.classList.add('animacao-ativada')
