@@ -1,5 +1,10 @@
 document.querySelectorAll('.tecla-branca').forEach(teclaB => {
     teclaB.addEventListener("click", function(){
+        teclaB.style = estiloTeclaBranca
+        setTimeout(() => {
+            teclaB.style = ""
+        }, 300)
+
         var nota = teclaB.dataset.key
         const audio = new Audio(`./sound/${notas[nota]}`);
         audio.play();
@@ -10,12 +15,18 @@ document.querySelectorAll('.tecla-branca').forEach(teclaB => {
 })
 document.querySelectorAll('.tecla-preta').forEach(teclaP => {
     teclaP.addEventListener("click", function(){
+        teclaP.style = estiloTeclaPreta
+        setTimeout(() => {
+            teclaP.style = ""
+        }, 300)
+
         var nota = teclaP.dataset.key
         const audio = new Audio(`./sound/${notas[nota]}`)
         audio.play()
 
         const display = document.getElementById("display-painel")
         display.innerText = notas[nota].substring(0, notas[nota].length - 5)
+
     })
 })
 
@@ -54,3 +65,5 @@ const notas = {
     g3: "SOL3.wav",
     g3S: "SOL#3.wav",
 }
+const estiloTeclaBranca = ['background: linear-gradient(to top, #979797 15%, #ffffff 100%);height: 100%;box-shadow: none;']
+const estiloTeclaPreta = ['background: linear-gradient(to top, #bbbbbb 0%, #000000 10%);']
