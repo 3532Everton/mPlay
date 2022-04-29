@@ -19,6 +19,7 @@
     <script src="js/script.js" defer></script>
     <script src="js/metronomo.js" defer></script>
     <script src="js/sonsdopiano.js" defer></script>
+    <script src="js/player.js" defer></script>
     <title>mPlay</title>
 </head>
 <body>
@@ -65,18 +66,18 @@
             <div class="player-de-musica">
                 <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                        <div class="dropdown-bnt-box"><p class="dropdown-bnt-box-text">Música</p></div>
+                        <div class="dropdown-bnt-box"><p id="dropdown-text" class="dropdown-bnt-box-text">Música</p></div>
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item" >VMZ - Cafeína</a></li>
-                        <li><a class="dropdown-item" >VMZ - Plutão</a></li>
-                        <li><a class="dropdown-item" >7mz - Suiton</a></li>
-                    </ul>
+                        <li><a class="dropdown-item" data-nomemusica="Capital Cities - Safe And Sound">Capital Cities - Safe And Sound</a></li>
+                        <li><a class="dropdown-item" data-nomemusica="American Authors - Best Day Of My Life">American Authors - Best Day Of My Life</a></li>
+                        <li><a class="dropdown-item" data-nomemusica="Capital Cities - Safe And Sound">Capital Cities - Safe And Sound</a></li>
                 </div>
                 <div class="player">
-                    <div class="player-bnt"><i class="fas fa-play"></i></div>
-                    <progress value="0.1" max="1"></progress>
-                    <div class="tempo">00:00/00:00</div>
+                    <audio id="audio" src=""></audio>
+                    <div class="player-bnt"><i id="player-bnt" class="fas fa-play"></i></div>
+                    <progress id="barra-de-progresso" value="0" max="100"></progress>
+                    <div class="tempo"><p class="tempo-restante" id="tempo-restante">00:00:00</p>/<p class="tempo-final" id="tempo-final">00:00:00</p></div>
                 </div>
             </div>
             <!-- metrônomo -->

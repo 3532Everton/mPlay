@@ -16,6 +16,7 @@ main {
 }
 footer {
     background: #161616 !important;
+    text-align: center;
 }
 .cabecalho {
     display:flex;
@@ -99,6 +100,7 @@ footer {
 }
 .corpo {
     padding: 4em;
+    padding-bottom: 2.5em;
 }
 .painel-de-controle{
     width: 100%;
@@ -137,7 +139,7 @@ footer {
     width: auto;
     margin: 0;
 }
-.-box-text-active {animation: musica 10s infinite linear;}
+.box-text-active {animation: musica 10s infinite linear;}
 .player {
     display: grid;
     place-items: center;
@@ -157,12 +159,30 @@ footer {
 progress {
     grid-column: 2;
     grid-row: 1;
+    height: 6px;
+    width: 100%;
+    border-radius: 3px;
+    background: #ffffff;
+    -webkit-appearance: none;
+}
+  /* Altera a cor de fundo em navegadores com webkit (Chrome, Safari etc) */
+::-webkit-progress-value, progress::-moz-progress-bar, ::-ms-fill {
+    background-color: green;
+}
+::-webkit-progress-bar{
+    border-radius: 3px;
+    background: #ffffff;
 }
 .tempo {
     grid-column: 2;
     grid-row: 2;
     font-size: 10pt;
     user-select: none;
+    display: flex;
+}
+.tempo-restante, .tempo-final{
+    margin: 0;
+
 }
 .metronomo{
     grid-column: 1;
