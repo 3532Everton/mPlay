@@ -120,12 +120,17 @@ footer {
     align-items: center;
     justify-content: space-evenly;
 }
+.player-de-musica div{
+    background: transparent;
+}
 .dropdown {
     width: 7em;
     height: 80%;
+    display: flex;
+    justify-content: center;
 }
 .btn-secondary{
-    width: 100%;
+    width: calc(100% - 1em);
     height: 100%;
     display: flex;
     align-items: center;
@@ -143,10 +148,12 @@ footer {
 .player {
     display: grid;
     place-items: center;
+    width: 100%;
 }
 .player-bnt{
     grid-column: 1;
     grid-row: 1/3;
+    width: 20px;
 }
 .player-bnt i{
     display: grid;
@@ -176,7 +183,7 @@ progress {
 .tempo {
     grid-column: 2;
     grid-row: 2;
-    font-size: 10pt;
+    font-size: calc(100% - 3pt);
     user-select: none;
     display: flex;
 }
@@ -360,6 +367,26 @@ div::-webkit-scrollbar-thumb{
     .player-de-musica{
         grid-column: 1/3;
         grid-row: 2/4;
+    }
+    .dropdown {
+        width: 100%;
+        height: 80%;
+        padding: 0;
+        display: grid;
+        place-items: center;
+    }
+    .btn-secondary {
+        width: calc(100% - 1.5em);
+        height: 100%;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 7px;
+    }
+    .dropdown-bnt-box-text {
+        width: auto;
+        margin: 0;
+        font-size: 10pt;
     }
     .metronomo{
         flex-wrap: wrap; 
