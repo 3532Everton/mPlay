@@ -6,7 +6,7 @@ document.querySelectorAll('.tecla-branca').forEach(teclaB => {
         }, 300)
 
         var nota = teclaB.dataset.key
-        const audio = new Audio(`./sound/${notas[nota]}`);
+        const audio = new Audio(`/sound/pianoSongs/${notas[nota]}`);
         audio.play();
 
         const display = document.getElementById("display-painel")
@@ -21,7 +21,7 @@ document.querySelectorAll('.tecla-preta').forEach(teclaP => {
         }, 300)
 
         var nota = teclaP.dataset.key
-        const audio = new Audio(`./sound/${notas[nota]}`)
+        const audio = new Audio(`/sound/pianoSongs/${notas[nota]}.mp3`)
         audio.play()
 
         const display = document.getElementById("display-painel")
@@ -31,39 +31,39 @@ document.querySelectorAll('.tecla-preta').forEach(teclaP => {
 })
 
 const notas = {
-    c1: "somzinho.wav",
-    c1S: "Metronome Lo.wav",
-    d1: "RÉ1.wav",
-    d1S: "RÉ#1.wav",
-    e1: "MI1.wav",
-    f1: "FÁ1.wav",
-    f1S: "FÁ#1.wav",
-    g1: "SOL1.wav",
-    g1S: "SOL#1.wav",
-    a1: "LÁ1.wav",
-    a1S: "LÁ#1.wav",
-    b1: "SI1.wav",
-    c2: "DÓ2.wav",
-    c2S: "DÓ#2.wav",
-    d2: "RÉ2.wav",
-    d2S: "RÉ#2.wav",
-    e2: "MI2.wav",
-    f2: "FÁ2.wav",
-    f2S: "FÁ#2.wav",
-    g2: "SOL2.wav",
-    g2S: "SOL#2.wav",
-    a2: "LÁ2.wav",
-    a2S: "LÁ#2.wav",
-    b2: "SI2.wav",
-    c3: "DÓ3.wav",
-    c3S: "DÓ#3.wav",
-    d3: "RÉ3.wav",
-    d3S: "RÉ#3.wav",
-    e3: "MI3.wav",
-    f3: "FÁ3.wav",
-    f3S: "FÁ#3.wav",
-    g3: "SOL3.wav",
-    g3S: "SOL#3.wav",
+    c1: "DO1.mp3",
+    c1S: "DO#1.mp3",
+    d1: "RE1.mp3",
+    d1S: "RE#1.mp3",
+    e1: "MI1.mp3",
+    f1: "FA1.mp3",
+    f1S: "FA#1.mp3",
+    g1: "SOL1.mp3",
+    g1S: "SOL#1.mp3",
+    a1: "LA1.mp3",
+    a1S: "LA#1.mp3",
+    b1: "SI1.mp3",
+    c2: "DO2.mp3",
+    c2S: "DO#2.mp3",
+    d2: "RE2.mp3",
+    d2S: "RE#2.mp3",
+    e2: "MI2.mp3",
+    f2: "FA2.mp3",
+    f2S: "FA#2.mp3",
+    g2: "SOL2.mp3",
+    g2S: "SOL#2.mp3",
+    a2: "LA2.mp3",
+    a2S: "LA#2.mp3",
+    b2: "SI2.mp3",
+    c3: "DO3.mp3",
+    c3S: "DO#3.mp3",
+    d3: "RE3.mp3",
+    d3S: "RE#3.mp3",
+    e3: "MI3.mp3",
+    f3: "FA3.mp3",
+    f3S: "FA#3.mp3",
+    g3: "SOL3.mp3",
+    g3S: "SOL#3.mp3",
 }
 const estiloTeclaBranca = ['background: linear-gradient(to top, #979797 15%, #ffffff 100%);height: 100%;box-shadow: none;']
 const estiloTeclaPreta = ['background: linear-gradient(to top, #bbbbbb 0%, #000000 10%);']
