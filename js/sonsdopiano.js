@@ -22,7 +22,6 @@ document.querySelectorAll('.tecla-preta').forEach(teclaP => {
 
         var nota = teclaP.dataset.key
         const audio = new Audio(`./sound/pianoSongs/${notas[nota]}`)
-        console.log(audio)
         audio.play()
 
         const display = document.getElementById("display-painel")
@@ -66,5 +65,5 @@ const notas = {
     g3: "SOL3.mp3",
     g3S: "SOLS3.mp3",
 }
-const estiloTeclaBranca = ['background: linear-gradient(to top, S979797 15%, Sffffff 100%);height: 100%;box-shadow: none;']
-const estiloTeclaPreta = ['background: linear-gradient(to top, Sbbbbbb 0%, S000000 10%);']
+const estiloTeclaBranca = ['background: linear-gradient(to top, #979797 15%, #ffffff 100%);height: 100%;box-shadow: none;']
+const estiloTeclaPreta = ['background: linear-gradient(to top, #bbbbbb 0%, #000000 10%);']
