@@ -195,7 +195,6 @@ progress {
 .metronomo{
     grid-column: 1;
     grid-row: 2;
-    padding: 5px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
