@@ -175,7 +175,7 @@ progress {
 }
   /* Altera a cor de fundo em navegadores com webkit (Chrome, Safari etc) */
 ::-webkit-progress-value, progress::-moz-progress-bar, ::-ms-fill {
-    background-color: green;
+    background-color: #008000;
 }
 ::-webkit-progress-bar{
     border-radius: 3px;
@@ -404,4 +404,29 @@ div::-webkit-scrollbar-thumb{
     .tecla-preta{width: 1.53em; right: -53px;}
     .ultima-preta{width: calc(1.53em/2);right: -18.5px;}
     
+}
+.aviso {
+    position: fixed; 
+    margin: 0 auto; 
+    width: 90%; 
+    height: 80%;
+    background: #111111;
+    top: 10%;
+    left: 5%;
+    display: grid;
+    place-items: center;
+}
+.btnAviso {
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border-radius: 5px;
+    transition: .5s;
+}
+.btnAviso:hover {
+    color: #14dc14;
+    border: 1px solid;
+    box-shadow: 0 0 .3rem .3rem #14dc14;
 }

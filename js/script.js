@@ -1,5 +1,27 @@
 // Mostrar data e hora
 const dataHora = document.getElementById('data-hora')
+
+const corpoDocumento = document.querySelector('body')
+function aviso() {
+    const aviso = document.createElement('div')
+    const textoAviso = document.createElement('h2')
+    const btnAviso = document.createElement('p')
+
+    aviso.classList.add('aviso')
+    btnAviso.classList.add('btnAviso')
+    textoAviso.innerText = 'Use fones de ouvido para melhor desfrutar dos sons'
+    btnAviso.innerText = 'Fechar'
+
+    aviso.insertAdjacentElement('afterbegin', btnAviso)
+    aviso.insertAdjacentElement('afterbegin', textoAviso)
+    corpoDocumento.insertAdjacentElement('beforeend', aviso)
+
+    btnAviso.addEventListener('click', () => {
+        aviso.style.display = 'none'
+    })
+
+}
+
 const zeroFill = n => {
     return ('0' + n).slice(-2);
 }
